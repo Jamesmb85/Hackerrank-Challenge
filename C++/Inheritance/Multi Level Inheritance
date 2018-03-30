@@ -1,0 +1,43 @@
+/*In this we will see what multi-level inheritance is. Suppose we have a class A which is the base class and we 
+have a class B which is derived from class A and we have a class C which is derived from class B, we can access 
+the functions of both class A and class B by creating an object for class C. This is called Multi-Level inheritance. 
+(B inherits A and C inherits B.)*/
+
+#include <cmath>
+#include <cstdio>
+#include <vector>
+#include <iostream>
+#include <algorithm>
+using namespace std;
+
+class Triangle{
+   public:
+      void triangle(){
+         cout<<"I am a triangle\n";
+      }
+};
+
+class Isosceles : public Triangle{
+     public:
+        void isosceles(){
+          cout<<"I am an isosceles triangle\n";
+        }
+};
+
+   
+class Equilateral: public Isosceles{
+	public:
+		void equilateral(){
+			cout << "I am an equilateral triangle\n";
+		}
+	
+};
+   
+int main(){
+  
+    Equilateral eqr; //create our object from the Equilateral class
+    eqr.equilateral(); //call equilateral function from equilateral class
+    eqr.isosceles(); //call isosceles function from equilateral class
+    eqr.triangle(); //call triangle function from equilateral class
+    return 0;
+}

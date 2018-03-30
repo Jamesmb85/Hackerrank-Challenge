@@ -1,0 +1,6 @@
+CREATE TABLE CITY(id Integer Primary Key, Name VACRCHAR2, COUNTRYCODE VACRCHAR2, DISTRICT VACRCHAR2, POPULATION NUMBER);
+
+/*Query all columns (attributes) for every row in the CITY table.*/
+
+SELECT * FROM CITY
+

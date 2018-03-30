@@ -1,0 +1,7 @@
+CREATE TABLE CITY(id Integer Primary Key, Name VACRCHAR2, COUNTRYCODE VACRCHAR2, DISTRICT VACRCHAR2, POPULATION NUMBER);
+
+/*Query the names of all the Japanese cities in the CITY table. The COUNTRYCODE for Japan is JPN.*/
+
+SELECT NAME FROM CITY
+WHERE COUNTRYCODE = "JPN";
+

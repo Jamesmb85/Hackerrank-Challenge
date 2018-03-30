@@ -1,0 +1,60 @@
+#include <iostream>
+
+using namespace std;
+
+//Rectangle Class
+class Rectangle{
+//definition of member variables - what we are computing inside class
+	public://access modifier
+		int width; //declare variable of type int
+		int height; //declare variable of type int
+	
+		void display(){
+		
+			cout << width << " " << height <<endl; //send value of variables to screen separated by a space
+		}
+};
+
+//RectangleArea Class
+class RectangleArea: public Rectangle{//to inherit from parent class
+//definition of member variables - what we are computing inside class
+	public://access modifier
+		
+		void read_input(){
+			
+			cin >> width; //read in value of width
+			cin >> height; //read in value of height
+		}
+		
+		void display() {
+			
+			cout << (width * height) << endl; //overload the display() method to print the area of the rectangle
+		}
+	
+};
+
+
+int main()
+{
+    /*
+     * Declare a RectangleArea object
+     */
+    RectangleArea r_area; //create our object from the RectangleArea class
+    
+    /*
+     * Read the width and height
+     */
+    r_area.read_input(); //call method from RectangleArea class
+    
+    /*
+     * Print the width and height
+     */
+    r_area.Rectangle::display(); //call method from the Rectangle class
+    
+    /*
+     * Print the area
+     */
+    r_area.display(); //call method from the RectangleArea
+    
+    return 0;
+}

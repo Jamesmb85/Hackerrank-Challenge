@@ -1,0 +1,9 @@
+CREATE TABLE STATION(id Integer Primary Key, CITY VACRCHAR2, STATE VACRCHAR2, LAT_N NUMBER, LONG_W NUMBER);
+
+/*Query the list of CITY names from STATION that do not start with vowels and do not end with vowels.
+Your result cannot contain duplicates.*/
+
+SELECT DISTINCT CITY FROM STATION
+WHERE (LEFT(CITY, 1) NOT IN ("A", "E", "I", "O", "U", "a", "e", "i", "o", "u")) 
+AND
+(RIGHT(CITY, 1) NOT IN ("A", "E", "I", "O", "U", "a", "e", "i", "o", "u"));

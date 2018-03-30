@@ -1,0 +1,32 @@
+#include <cmath>
+#include <cstdio>
+#include <vector>
+#include <iostream>
+#include <algorithm>
+using namespace std;
+
+
+class Triangle{
+//definition of member variables - what we are computing inside class
+    public: //access modifier
+       void triangle(){
+           cout<<"I am a triangle\n";
+       }
+};
+class Isosceles : public Triangle{ //to inherit from parent class
+//definition of member variables - what we are computing inside class
+    public: //access modifier
+       void isosceles(){
+          cout<<"I am an isosceles triangle\n";
+       }
+       void description(){
+           cout << "In an isosceles triangle two sides are equal\n";
+       }
+};
+int main(){
+    Isosceles isc; //create our object from the Isosceles class
+    isc.isosceles(); //call Isosceles function from Isosceles class
+    isc.description(); //call description function from Isosceles class
+    isc.triangle(); // call triangle function which was inherited from Triangle class
+    return 0;
+}
