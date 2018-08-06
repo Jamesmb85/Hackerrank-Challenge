@@ -12,6 +12,8 @@ public class InstanceOFTutorial{
       int a = 0,b = 0,c = 0;
       for(int i = 0; i < mylist.size(); i++){
          Object element=mylist.get(i);
+	  //instanceof is a keyword that is used for checking if a reference variable is containing a given 
+	  //type of object reference or not.
          if(element instanceof Student)
             a++;
          if(element instanceof Rockstar)
