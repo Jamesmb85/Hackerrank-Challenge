@@ -23,7 +23,7 @@ public class Solution {
             //check to see if letter is uppercase
             if(s.charAt(i) >= 'A' && s.charAt(i) <= 'Z'){
                 /*The Java String charAt() method returns the character at the specified index. 
-				The index value should lie between 0 and length()-1.*/
+		The index value should lie between 0 and length()-1.*/
                 words++; //increase variable by 1
             }
         }
