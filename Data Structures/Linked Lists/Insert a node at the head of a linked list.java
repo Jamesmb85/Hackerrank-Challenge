@@ -21,8 +21,8 @@ public class Solution {
     }
 	//LinkedList Class
     static class SinglyLinkedList {
-        public SinglyLinkedListNode head; //head is an instance of the Node class
-        public SinglyLinkedListNode tail; //tail is an instance of the Node class
+        public SinglyLinkedListNode head; //This is a pointer. head is an instance of the Node class
+        public SinglyLinkedListNode tail; //This is a pointer. tail is an instance of the Node class
 
 		//constructor that went creating a new LinkedList, it set the head and tail Node references to null
         public SinglyLinkedList() {
@@ -66,12 +66,15 @@ public class Solution {
 		 Create a new node with the given integer*/
         SinglyLinkedListNode insertNodeInstance = new SinglyLinkedListNode(data);
         
-         /* 3. Make next of insertNodeInstance as head 
-		 Insert this node at the head of the linked list*/
+        /* 3. Step 3 sets the new node's next field to the current head of the list.*/
         insertNodeInstance.next = llist;
         
-        /* 4. Move the head to point to insertNodeInstance */
+        /* 4. Step 4 sets the head field to the new node.*/
         llist = insertNodeInstance;
+		
+		/* Steps 3 and 4 together insert the new node at the beginning of the list, and make it the new head. 
+		The head field now points to the new node, and the new node's next field now points to the previous head 
+		(which means the previous head node is now the second node in the list). */
         
 		//return the new head node.
         return llist;
