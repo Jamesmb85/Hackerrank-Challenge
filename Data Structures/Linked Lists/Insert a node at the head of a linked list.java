@@ -10,10 +10,11 @@ public class Solution {
 	//this is the Node class
     static class SinglyLinkedListNode {
         public int data; //this is the data that is going to be entered into the LinkedList
-        //This is a pointer. It stores a reference to the next Node in the LinkedList. Default value is null if we don't set it in constructor
-		public SinglyLinkedListNode next; 
+       
+	 //This is a pointer. It stores a reference to the next Node in the LinkedList. Default value is null if we don't set it in constructor
+	public SinglyLinkedListNode next; 
 
-		//constructor that once a new Node(instance) is created, nodeData is assigned to data and next is assigned null
+	//constructor that once a new Node(instance) is created, nodeData is assigned to data and next is assigned null
         public SinglyLinkedListNode(int nodeData) {
             this.data = nodeData; //nodeData is the input entered into the LinkedList and it is assigned to data
             this.next = null; //node is set to default for each new element created
@@ -62,8 +63,7 @@ public class Solution {
     static SinglyLinkedListNode insertNodeAtHead(SinglyLinkedListNode llist, int data) {
 		 /*Adding a node to the front requires four steps */
         
-         /* 1 & 2: Allocate the Node & Put in the data
-		 Create a new node with the given integer*/
+         /* 1 & 2: Allocate the Node & Put in the data Create a new node with the given integer*/
         SinglyLinkedListNode insertNodeInstance = new SinglyLinkedListNode(data);
         
         /* 3. Step 3 sets the new node's next field to the current head of the list.*/
