@@ -8,7 +8,7 @@ import java.util.regex.*;
 
 public class Solution {
 
-	 //this is the Node class
+    //this is the Node class
     static class SinglyLinkedListNode {
         public int data; //this is the data that is going to be entered into the LinkedList
         //This is a pointer. It stores a reference to the next Node in the LinkedList. Default value is null if we don't set it in constructor
@@ -20,6 +20,7 @@ public class Solution {
         }
     }
 
+    //LinkedList Class
     static class SinglyLinkedList {
         public SinglyLinkedListNode head; //This is a pointer. head is an instance of the Node class
 
@@ -68,7 +69,7 @@ public class Solution {
      */
     static SinglyLinkedListNode insertNodeAtTail(SinglyLinkedListNode head, int data) {
 
-		  /* 1.Allocate the Node & Put in the data
+	/* 1.Allocate the Node & Put in the data
          Create a new node with the given data. New Instance calls the default constructor*/
          SinglyLinkedListNode nodeWeAreGoingToAddAtTheEnd = new SinglyLinkedListNode(data);
         
@@ -93,7 +94,7 @@ public class Solution {
         /* 5. Change the next of last node. The last node is the  */
         last.next = nodeWeAreGoingToAddAtTheEnd;
         
-		//return head
+	//return head
         return head;
 
     }
