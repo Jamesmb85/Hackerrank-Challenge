@@ -77,6 +77,7 @@ public class Solution {
 	 
      */
     static void reversePrint(SinglyLinkedListNode head) {
+	//breaking condition
         if(head == null){
             return;
         }
