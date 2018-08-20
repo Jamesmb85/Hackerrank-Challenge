@@ -8,20 +8,25 @@ import java.util.regex.*;
 
 public class Solution {
 
+     //this is the Node class
     static class SinglyLinkedListNode {
-        public int data;
-        public SinglyLinkedListNode next;
+        public int data; //this is the data that is going to be entered into the LinkedList
+        //This is a pointer. It stores a reference to the next Node in the LinkedList. Default value is null if we don't set it in constructor
+	public SinglyLinkedListNode next; 
 
+	//constructor that once a new Node(instance) is created, nodeData is assigned to data and next is assigned null
         public SinglyLinkedListNode(int nodeData) {
-            this.data = nodeData;
-            this.next = null;
+            this.data = nodeData; //nodeData is the input entered into the LinkedList and it is assigned to data
+            this.next = null; //node is set to default for each new element created
         }
     }
-
+    
+    //LinkedList Class
     static class SinglyLinkedList {
-        public SinglyLinkedListNode head;
-        public SinglyLinkedListNode tail;
+        public SinglyLinkedListNode head; //This is a pointer. head is an instance of the Node class
+        public SinglyLinkedListNode tail; //This is a pointer. tail is an instance of the Node class
 
+	//constructor that went creating a new LinkedList, it set the head and tail Node references to null
         public SinglyLinkedList() {
             this.head = null;
             this.tail = null;
@@ -74,7 +79,7 @@ public class Solution {
 	 The last line contains an integer position denoting the position of the node that has to be deleted form the linked list. 
 	 */
     static SinglyLinkedListNode deleteNode(SinglyLinkedListNode head, int position) {
-		//store head Node
+	//store head Node
         SinglyLinkedListNode newHead = head;
         
         //if list is empty, return head
@@ -90,7 +95,7 @@ public class Solution {
         
         //find the previous Node which is at position-1
         for(int i = 0; newHead != null && i < position - 1; i++){
-                        //the newHead next field is assigned to back to newHead. So, whatever newHead.next is pointing at is assigned to newNode 
+           //the newHead next field is assigned to back to newHead. So, whatever newHead.next is pointing at is assigned to newNode 
 
             newHead = newHead.next;
         }
