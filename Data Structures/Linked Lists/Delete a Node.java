@@ -95,8 +95,8 @@ public class Solution {
         
         //find the previous Node which is at position-1
         for(int i = 0; newHead != null && i < position - 1; i++){
-           //the newHead next field is assigned to back to newHead. So, whatever newHead.next is pointing at is assigned to newNode 
-
+           //the newHead next field is assigned to back to newHead. 
+	   //So, whatever newHead.next is pointing at is assigned to newNode 
             newHead = newHead.next;
         }
         
