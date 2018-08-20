@@ -12,20 +12,20 @@ public class Solution {
     static class SinglyLinkedListNode {
         public int data; //this is the data that is going to be entered into the LinkedList
         //This is a pointer. It stores a reference to the next Node in the LinkedList. Default value is null if we don't set it in constructor
-		public SinglyLinkedListNode next; 
+	public SinglyLinkedListNode next; 
 
-		//constructor that once a new Node(instance) is created, nodeData is assigned to data and next is assigned null
+	//constructor that once a new Node(instance) is created, nodeData is assigned to data and next is assigned null
         public SinglyLinkedListNode(int nodeData) {
             this.data = nodeData; //nodeData is the input entered into the LinkedList and it is assigned to data
             this.next = null; //node is set to default for each new element created
         }
     }
-	//LinkedList Class
+    //LinkedList Class
     static class SinglyLinkedList {
         public SinglyLinkedListNode head; //This is a pointer. head is an instance of the Node class
         public SinglyLinkedListNode tail; //This is a pointer. tail is an instance of the Node class
 
-		//constructor that went creating a new LinkedList, it set the head and tail Node references to null
+	//constructor that went creating a new LinkedList, it set the head and tail Node references to null
         public SinglyLinkedList() {
             this.head = null;
             this.tail = null;
@@ -81,16 +81,16 @@ public class Solution {
             return;
         }
         
-		/*I solved this using recursion. Let's look at a simple linked list of 1->2->3
-		Head doesn't equal null so we call reversePrint(head.next)
-		
-		3. reversePrint(head.next) = 3 is placed on the call stack
-		2. reversePrint(head.next) = 2 is placed on the call stack
-		1. reversePrint(head.next) = 1 is placed on the call stack
-		
-		Now, head.next = null we remove the reversePrint(head.next) in reverse order and then print them out.
-		
-		*/
+	/*I solved this using recursion. Let's look at a simple linked list of 1->2->3
+	Head doesn't equal null so we call reversePrint(head.next)
+
+	3. reversePrint(head.next) = 3 is placed on the call stack
+	2. reversePrint(head.next) = 2 is placed on the call stack
+	1. reversePrint(head.next) = 1 is placed on the call stack
+
+	Now, head.next = null we remove the reversePrint(head.next) in reverse order and then print them out.
+
+	*/
         reversePrint(head.next);
         System.out.println(head.data);
 
