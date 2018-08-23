@@ -7,11 +7,13 @@ import java.util.concurrent.*;
 import java.util.regex.*;
 
 public class Solution {
-   //this is the Node class
+    //this is the Node class
     static class SinglyLinkedListNode {
         public int data; //this is the data that is going to be entered into the LinkedList
-        //This is a pointer. It stores a reference to the next Node in the LinkedList. Default value is null if we don't set it in constructor
-		public SinglyLinkedListNode next; 
+        
+	/*This is a pointer. It stores a reference(memory address) to the next Node in the LinkedList. 
+	Default value is null if we don't set it in constructor */
+	public SinglyLinkedListNode next; 
 
 	//constructor that once a new Node(instance) is created, nodeData is assigned to data and next is assigned null
         public SinglyLinkedListNode(int nodeData) {
@@ -21,8 +23,10 @@ public class Solution {
     }
     //LinkedList Class
     static class SinglyLinkedList {
-        public SinglyLinkedListNode head; //This is a pointer. head is an instance of the Node class
-        public SinglyLinkedListNode tail; //This is a pointer. tail is an instance of the Node class
+	/*This is a pointer. It stores a reference(memory address) to the head Node in the LinkedList. */
+        public SinglyLinkedListNode head;
+	/*This is a pointer. It stores a reference(memory address) to the tail Node in the LinkedList. */		
+        public SinglyLinkedListNode tail; 
 
 	//constructor that went creating a new LinkedList, it set the head and tail Node references to null
         public SinglyLinkedList() {
@@ -46,7 +50,7 @@ public class Solution {
     }
 	
 	
-	    // Complete the printLinkedList function below.
+ // Complete the printLinkedList function below.
 
     /*
      * For your reference:
@@ -62,14 +66,41 @@ public class Solution {
      */
     static void printLinkedList(SinglyLinkedListNode head) {
 	//if head==null, then that means the List in empty and nothing is printed
-        while(head != null){
-            System.out.println(head.data); //print out data element of the node
-            head = head.next; //head.next is the reference to the next element and it is assigned to head
 
+	/*Let's look at out simple LinkedList of 1->2->3->null
+
+	Iteration 1
+	head = some memory address since it is a reference to the object(head which is an instance of SinglyLinkedListNode)
+	Let's assume the memory address is 100ABC
+
+	So, we enter the loop
+
+	head.data = 1 so it is printed
+	head.next = is the next memory address and it is assigned to head
+	Let's assume the memory address is 101ABC
+
+	Iteration 2
+	head = 101ABC != null so loop continues
+	head.data = 2 so it is printed
+	head.next = is the next memory address and it is assigned to head
+	Let's assume the memory address is 102ABC
+
+	Iteration 3
+	head = 102ABC != null so loop continues
+	head.data = 3 so it is printed
+	head.next = is the next memory address and it is assigned to head. We are at the end of the list so it is null
+
+	Iteration 4
+	head = null so loop doesn't execute
+	*/
+	while(head != null){
+            System.out.println(head.data); //print out data element of the node
+            head = head.next; //head.next is the reference(memory address) to the next element and it is assigned to head
+
+    	}
     }
-	
-	
-	    private static final Scanner scanner = new Scanner(System.in);
+		
+    private static final Scanner scanner = new Scanner(System.in);
 
     public static void main(String[] args) {
         SinglyLinkedList llist = new SinglyLinkedList();
