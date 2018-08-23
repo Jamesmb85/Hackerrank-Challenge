@@ -8,11 +8,11 @@ import java.util.regex.*;
 
 public class Solution {
 
-    //this is the Node class
+   //this is the Node class
     static class SinglyLinkedListNode {
         public int data; //this is the data that is going to be entered into the LinkedList
         //This is a pointer. It stores a reference to the next Node in the LinkedList. Default value is null if we don't set it in constructor
-		public SinglyLinkedListNode next;
+	public SinglyLinkedListNode next;
 
         public SinglyLinkedListNode(int nodeData) {
             this.data = nodeData; //nodeData is the input entered into the LinkedList and it is assigned to data
@@ -20,7 +20,7 @@ public class Solution {
         }
     }
 
-    //LinkedList Class
+     //LinkedList Class
     static class SinglyLinkedList {
         public SinglyLinkedListNode head; //This is a pointer. head is an instance of the Node class
 
@@ -68,6 +68,29 @@ public class Solution {
 	 
      */
     static SinglyLinkedListNode insertNodeAtTail(SinglyLinkedListNode head, int data) {
+		
+	/*Let's look at our simple LinkedList of 1->2->3->null 
+
+	 We are going to add 50 to the tail. 
+	 Let's assume the memory address of 1 is 100ABC, 2 is 101ABC, and 3 is 102ABC
+
+	 SinglyLinkedListNode nodeWeAreGoingToAddAtTheEnd = new SinglyLinkedListNode(data); creates a new Node and its 
+	 memory address is 103ABC and data = 50
+
+	 if(head == null) return false so it doesn't execute
+
+	 nodeWeAreGoingToAddAtTheEnd.next is currently 104ABC and is assigned the value of null
+
+	 SinglyLinkedListNode last = head; creates a new instance of the head and the memory value of head is assgined to last
+
+	while (last.next != null){
+		last = last.next;
+	}  the memory address is updated until you get to the end of the list. 
+
+
+	last.next = nodeWeAreGoingToAddAtTheEnd; means the null is replaced by the node we are inserting
+
+		*/
 
 	/* 1.Allocate the Node & Put in the data
          Create a new node with the given data. New Instance calls the default constructor*/
@@ -82,16 +105,16 @@ public class Solution {
         nodeWeAreGoingToAddAtTheEnd.next = null;
  
         /* 4. Traverse till the last node */
-		//create new Node for the head
+	//create new Node for the head
         SinglyLinkedListNode last = head; 
         
-		while (last.next != null){
-			//last.next points to the next data element and that value is assigned to last. This is done until you reach the tail
-			last = last.next;
-		}
+	while (last.next != null){
+		//last.next points to the next data element and that value is assigned to last. This is done until you reach the tail
+		last = last.next;
+	}
             
 
-        /* 5. Change the next of last node. The last node is the  */
+        /* 5. Change the next of last node.*/
         last.next = nodeWeAreGoingToAddAtTheEnd;
         
 	//return head
@@ -99,7 +122,8 @@ public class Solution {
 
     }
 	
-	    private static final Scanner scanner = new Scanner(System.in);
+	
+    private static final Scanner scanner = new Scanner(System.in);
 
     public static void main(String[] args) throws IOException {
         BufferedWriter bufferedWriter = new BufferedWriter(new FileWriter(System.getenv("OUTPUT_PATH")));
