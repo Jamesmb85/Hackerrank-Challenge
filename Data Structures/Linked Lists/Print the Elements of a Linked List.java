@@ -67,7 +67,7 @@ public class Solution {
     static void printLinkedList(SinglyLinkedListNode head) {
 	//if head==null, then that means the List in empty and nothing is printed
 
-	/*Let's look at out simple LinkedList of 1->2->3->null
+	/*Let's look at our simple LinkedList of 1->2->3->null
 
 	Iteration 1
 	head = some memory address since it is a reference to the object(head which is an instance of SinglyLinkedListNode)
