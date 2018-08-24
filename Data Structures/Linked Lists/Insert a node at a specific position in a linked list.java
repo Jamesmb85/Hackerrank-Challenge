@@ -114,7 +114,7 @@ public class Solution {
         }
         /* 3. if position equals 0, then return the head*/
         else if (position == 0){
-			//sets the new node's next field to the current head of the list
+	    //sets the new node's next field to the current head of the list
             nodeWeAreGoingToAdd.next = head;
             return nodeWeAreGoingToAdd;
         }
@@ -125,7 +125,7 @@ public class Solution {
             
         /*Iterate through list until you get to the position right before you do the insertion  */     
         while(i < position - 1){
-			//the temp node next field is assigned to back to the node. So, whatever temp.node is pointing at is assigned to temp 
+	   //the temp node next field is assigned to back to the node. So, whatever temp.node is pointing at is assigned to temp 
             temp = temp.next;
             i++;
         }
@@ -134,11 +134,11 @@ public class Solution {
 		nodeWeAreGoingToAdd is pointing to	*/
         nodeWeAreGoingToAdd.next=temp.next;
 		
-		/* 5. The value of  nodeWeAreGoingToAdd is replaces what temp.next is pointing to*/
+	/* 5. The value of  nodeWeAreGoingToAdd is replaces what temp.next is pointing to*/
         temp.next=nodeWeAreGoingToAdd;
         
-		//return head
-		return head;
+	//return head
+	return head;
         
         
     }
