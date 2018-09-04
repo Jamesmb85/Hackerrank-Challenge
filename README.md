@@ -1,7 +1,7 @@
 # Hackerrank-Challenge
-My solution to the coding challenge on Hackerank. Multiple languages including Java, C++, Python, and SQL. 
+My solution to the coding challenge on HackerRank. Multiple languages including Java, C++, Python, and SQL. 
 
-Data Structures and Algorithms usage are also on display.
+Data Structures and Algorithms usage is also on display.
 
 Most code is commented to display my thought process at the time.
 
