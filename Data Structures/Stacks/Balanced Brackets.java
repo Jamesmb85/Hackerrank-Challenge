@@ -20,7 +20,8 @@ By this logic, we say a sequence of brackets is balanced if the following condit
     It contains no unmatched brackets.
     The subset of brackets enclosed within the confines of a matched pair of brackets is also a matched pair of brackets.
 
-Given strings of brackets, determine whether each sequence of brackets is balanced. If a string is balanced, return YES. Otherwise, return NO.  */
+Given strings of brackets, determine whether each sequence of brackets is balanced. 
+If a string is balanced, return YES. Otherwise, return NO.  */
 
 
 public class Main {
