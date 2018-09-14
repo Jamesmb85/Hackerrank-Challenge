@@ -31,7 +31,7 @@ public class Main {
         //clear the input line
         sc.nextLine();
 
-        //before entering loop, let's create a Deque of Integers backed back an Array
+        //before entering loop, let's create a Deque of Integers backed by an Array
         Deque<String> stringStack = new ArrayDeque<String>();
 
         //push the initial string to the stack
@@ -64,10 +64,10 @@ public class Main {
                 case 2:
                     System.out.println("How many characters do you want to remove from the string? ");
                     int charactersToRemove = sc.nextInt();
-                    /*ok, so essentially we are keep a substring. For example, if our string is abcd and we want to remove the last
+                    /*ok, so essentially we are keeping a substring. For example, if our string is abcd and we want to remove the last
                     * 2 characters we return ab and place it in the stack.
                      The substring function start at 0 and goes until the end of the string(not inclusive) minus the characters to remove.
-                     So, we have abcd.substring(0, 4-2) which is ab since sibstring is not inclusive for the ending index */
+                     So, we have abcd.substring(0, 4-2) which is ab since substring is not inclusive for the ending index */
                     workingString = workingString.substring(0, workingString.length() - charactersToRemove );
 
                     //add string to the stack
