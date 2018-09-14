@@ -63,7 +63,7 @@ public class Main {
 
                     break;
                 case 2:
-                    // move all the elements from stackUsedForBack to stackUsedForFront
+                    // move all the elements from stackUsedForFront to stackUsedForBack
                     //check to see if stackUsedForFront is empty
                     if(stackUsedForBack.isEmpty() ){
                         //check to see if stackUsedForBack is empty
@@ -76,7 +76,7 @@ public class Main {
                     stackUsedForBack.pop();
                     break;
                 case 3:
-                    // move all the elements from stackUsedForBack to stackUsedForFront
+                    // move all the elements from stackUsedForFront to stackUsedForBack
                     //check to see if stackUsedForFront is empty
                     if(stackUsedForBack.isEmpty() ){
                         //check to see if stackUsedForBack is empty
