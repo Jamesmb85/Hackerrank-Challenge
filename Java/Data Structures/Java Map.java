@@ -8,27 +8,18 @@ import java.util.Scanner;
 
 
 /*You are given a phone book that consists of people's names and their phone number. After that you will be given some person's name as query. For each query, print the phone number of that person.
-
 Input Format
-
 The first line will have an integer, n, denoting the number of entries in the phone book.
 Each entry consists of two lines: a name and the corresponding phone number.
-
 After these, there will be some queries. Each query will contain a person's name. Read the queries until end-of-file.
-
 Constraints:
 A person's name consists of only lower-case English letters and it may be in the format 'first-name last-name' or in the format 'first-name'.
 Each phone number has exactly 8 digits without any leading zeros.
-
 1<=N<=1000000
 1<=Query<=1000000
-
-
 Output Format
-
 For each case, print "Not found" if the person has no entry in the phone book. Otherwise, print the person's name and phone number.
 See sample output for the exact format.
-
 To make the problem easier, we provided a portion of the code in the editor. You can either complete that code or write completely on your own.   */
 
 
@@ -47,7 +38,7 @@ public class Main {
         Map<String, Integer> phonebook = new HashMap<>();
 
         //fill in the phonebook
-        for(int i = 0; i < entries; i++){
+        for (int i = 0; i < entries; i++) {
             System.out.println("What's the person's full name: ");
             String name = sc.next();
 
@@ -71,34 +62,23 @@ public class Main {
         }*/
 
 
-       //query phone book entries until you find no more keys
-        for(String value: phonebook.keySet()){
+        //query phone book entries until you find no more keys
+        for (String value : phonebook.keySet()) {
             System.out.println("Who do you want to look for in the phone book? Enter their full name: ");
-            String fullName = sc.next();
+            String fullName = sc.nextLine();
 
-        // This method is used to search the specified key from this map.    
-        if(phonebook.containsKey(fullName)){
+
+            // This method is used to search the specified key from this map.
+            if (phonebook.containsKey(fullName)) {
                 System.out.println("Name is: " + fullName + " and phone number is: " + phonebook.get(fullName));
-            }
-        else{
+            } else {
                 System.out.println("Not found");
             }
 
+        }
 
         //close the scanner class
         sc.close();
-
     }
 
-
 }
-
-
-
-
-
-
-
-
-
-
