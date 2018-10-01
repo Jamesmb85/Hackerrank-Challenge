@@ -76,16 +76,13 @@ public class Main {
             System.out.println("Who do you want to look for in the phone book? Enter their full name: ");
             String fullName = sc.next();
 
-            //exception handling. We need if entry isn't found
-            try{
-                int isNameFoundOrNot = phonebook.get(fullName); //if this isn't true, then print statement isn't executed
+        // This method is used to search the specified key from this map.    
+        if(phonebook.containsKey(fullName)){
                 System.out.println("Name is: " + fullName + " and phone number is: " + phonebook.get(fullName));
             }
-            //name isn't found
-            catch (NullPointerException e){
+        else{
                 System.out.println("Not found");
             }
-        }
 
 
         //close the scanner class
