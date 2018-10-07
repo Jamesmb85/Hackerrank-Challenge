@@ -18,6 +18,8 @@ public class Main {
 
         System.out.println(isPalindrome("abcba")); //should return true
         System.out.println(isPalindrome("wasitacaroracatisaw")); //should return true The string with spaces is was it a car or cat i saw
+        System.out.println(isPalindrome("a b c b a")); //return true
+        System.out.println(isPalindrome("hello")); //return false;
 
     }
 
@@ -26,6 +28,9 @@ public class Main {
         //create a deque of type characters back by an array
         Deque<Character> valuesOfString = new ArrayDeque<Character>();
 
+        //remove all whitespace from the string
+        input = input.trim();
+
         //need to iterate through the string an place each character in the stack
         for(int i = 0; i < input.length(); i++){
             //call push method and assign the value at index i
@@ -33,7 +38,7 @@ public class Main {
         }
 
         /*With all characters in the deque now, we need to compare the letter at the top of the stack and with letter in the string
-        * if at any point the letter aren't equal we return false. We pop the letter off if they are equal and go to the next iteration*/
+         * if at any point the letter aren't equal we return false. We pop the letter off if they are equal and go to the next iteration*/
         for(int j = 0; j < valuesOfString.size(); j++){
             //compare the top of the stack with the first letter in the string
             if(valuesOfString.peek() == input.charAt(j) ){
@@ -52,13 +57,3 @@ public class Main {
     }
 
 }
-
-
-
-
-
-
-
-
-
-
