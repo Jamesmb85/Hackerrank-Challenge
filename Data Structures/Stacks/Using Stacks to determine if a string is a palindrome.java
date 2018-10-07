@@ -4,9 +4,7 @@ import java.util.ArrayDeque;
 import java.util.Deque;
 import java.util.Scanner;
 
-/*Create a method that determine si a string is a Palindrome or not.
-* Below, my method doesn't take into account spaces and characters such as question marks
- So, abcba is a palindrome, but a b c b a is not. */
+/*Create a method that determine if a string is a Palindrome or not. */
 
 
 public class Main {
