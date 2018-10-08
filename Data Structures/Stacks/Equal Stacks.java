@@ -35,6 +35,7 @@ public class Main {
         int sumOfStackOne = 0;
         int sumOfStackTwo = 0;
         int sumOfStackThree = 0;
+        int counter = 0;
 
         //fill in stack #1
         for(int i = 0; i < stackOne; i++){
@@ -64,9 +65,9 @@ public class Main {
         }
 
         //check the size before the loop
-        System.out.println(sumOfStackOne);
-        System.out.println(sumOfStackTwo);
-        System.out.println(sumOfStackThree);
+        System.out.println("Value before removing item from stack 1 is " + sumOfStackOne);
+        System.out.println("Value before removing item from stack 2 is " + sumOfStackTwo);
+        System.out.println("Value before removing item from stack 3 is " +sumOfStackThree);
         System.out.println("\n");
 
         /*We need to pop elements off each deque until their sums are equal. Let's use a while loop to  do that.
@@ -81,25 +82,32 @@ public class Main {
                 sumOfStackOne -= s1.peek();
                 //remove from stack 1
                 s1.pop();
+                //increase counter
+                counter++;
             }
             else if(sumOfStackTwo >= sumOfStackOne && sumOfStackTwo >= sumOfStackThree){
                 //remove the amount from the sum
                 sumOfStackTwo -= s2.peek();
                 //remove from stack 1
                 s2.pop();
+                //increase counter
+                counter++;
             }
             else if(sumOfStackThree >= sumOfStackOne && sumOfStackThree >= sumOfStackTwo){
                 //remove the amount from the sum
                 sumOfStackThree -= s3.peek();
                 //remove from stack 1
                 s3.pop();
+                //increase counter
+                counter++;
             }
         }
 
         //at this point after the loop we can print any of the sums since they should be the same
-        System.out.println(sumOfStackOne);
-        System.out.println(sumOfStackTwo);
-        System.out.println(sumOfStackThree);
+        System.out.println("Value after removing item from stack 1 is " + sumOfStackOne);
+        System.out.println("Value after removing item from stack 2 is " + sumOfStackTwo);
+        System.out.println("Value after removing item from stack 3 is " + sumOfStackThree);
+        System.out.println("The amount of times a stack was popped was " + counter);
 
         //close the scanner class
         sc.close();
@@ -107,12 +115,3 @@ public class Main {
     }
 
 }
-
-
-
-
-
-
-
-
-
