@@ -70,7 +70,7 @@ def product(fracs):
 
     t =  reduce(lambda x, y : x * y, fracs) # complete this line with a reduce statement
 	
-	#so our lambda function has 2 arguments(x,y) and the expression(x * y) is applied to fracs
+    #so our lambda function has 2 arguments(x,y) and the expression(x * y) is applied to fracs
     return t.numerator, t.denominator
 	
 if __name__ == '__main__':
