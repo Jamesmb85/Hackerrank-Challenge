@@ -37,7 +37,6 @@ def merge_the_tools(string, k):
         newEmpty_string = '' #reset the string
 
 
-#AABCAAADA
 string = input("Enter the string of letters we want to analyze. No spaces: ")
 k = int(input("Enter the size of the substring: "))
 merge_the_tools(string, k)
