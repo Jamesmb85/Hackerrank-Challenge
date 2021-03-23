@@ -87,15 +87,36 @@
 # NOTE: There is no penalty for solutions that are correct but have more than 4 line
 
 
+#import Collections module
 from collections import namedtuple
-number_of_students = int(input("Enter the number of the students: \n"))
-fields = input().split() #read in the fields
-total = 0
-for student in range(number_of_students):
-    #create our namedtuple from the fields above
-    students = namedtuple("Student", fields)
-    field1, field2, field3, field4 = input().split() #read in the fields
-    singleStudent = students(field1, field2, field3, field4) #create an Students insstance and assign the fields
-    total += int(singleStudent.MARKS) #Marks is one of the fields and we are calling it and its value is added to the total field
 
-print('{:.2f}'.format(total/number_of_students))
+#cast input as an int
+total_number_of_students = int(input("Enter the total number of students: "))
+
+#names of the columns. We don't know the order so we will just create a list.
+#The split function returns a list of strings separated by the a delimeter
+column_names = input().split()
+
+#average grade
+average_grade = 0
+
+#we need to loop for each student
+#We use the underscore(_) in the loop since we aren't using the value in range in our computation
+for _ in range(total_number_of_students):
+    # Declaring namedtuple()
+    #namedTuple takes in a list as the second parameter
+    Student = namedtuple('Student',column_names)
+
+    #for each student enter the column names. The problem states they aren't the same for each student so we need to input them
+    column1, column2, column3, column4 = input().split()
+
+    #assign the columns to namedTuple Instance
+    S = Student(column1, column2, column3, column4)
+
+    #for each student we need to access the MARKS column
+    #All of the columns are strings so we need to cast as an int
+    #we need to add all of the MARKS and find the average
+    average_grade +=  int(S.MARKS)/total_number_of_students
+
+#print out the average grade
+print("{:.2f}".format(average_grade))
