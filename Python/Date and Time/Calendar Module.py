@@ -75,7 +75,23 @@
 
 # The day on August 5th was WEDNESDAY.
 
+#Python 3 Solution
+#import module
+import calendar
 
+#tuple unpacking. Split returns a list of strings and those are unpacked by position to the corresponding variables at the same position
+#use the map function to cast the strings as int
+month, day, year = map(int, input().split())
+
+#create a dictionary of Days(values) and Numbers
+days = {0:'MONDAY',1:'TUESDAY',2:'WEDNESDAY',3:'THURSDAY',4:'FRIDAY',5:'SATURDAY',6:'SUNDAY'}
+
+#Weekday Function returns the week day number(0 is Monday) of the date specified in its arguments
+#So, the int retruns is mapped to a day in the days dictionary
+print(days[calendar.weekday(year, month, day)])
+
+
+"""#Python 2 Solution
 import calendar
 
 #use the map function to map the int function to the values in input string that are separated by a space
@@ -84,3 +100,5 @@ month, day, year = map(int, input().split())
 #calendar.day_name An array that represents the days of the week in the current locale.
 #calendar.weekday(year, month, day) Returns the day of the week (0 is Monday) for year (1970–…), month (1–12), day (1–31).
 print(calendar.day_name[calendar.weekday(year, month, day)].upper())
+
+"""
